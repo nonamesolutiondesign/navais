@@ -13,17 +13,20 @@
 
 <body>
 
+    <!-- NAVEGACIÓN UNIVERSAL -->
     <header class="navbar">
         <div class="container nav-container">
-            <img src="/img/Navais_logo1.svg" 
-                 alt="¡Hola! Te damos la bienvenida a Navais." 
-                 class="logo" id="logo-navais">
+            <a href="index.html">
+                <img src="/img/Navais_logo1.svg" 
+                     alt="¡Hola! Te damos la bienvenida a Navais." 
+                     class="logo" id="logo-navais">
+            </a>
             
             <nav class="ignorar-lectura">
                 <ul class="nav-links">
-                    <li><a href="#problema">Problema</a></li>
-                    <li><a href="#solucion">Nuestra Solución</a></li>
-                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="index.html">El Proyecto</a></li>
+                    <li><a href="3d.html">Prototipos 3D</a></li>
+                    <li><a href="notas.html">En los Medios</a></li>
                     <li><a href="#contacto" class="btn-primary">Contacto</a></li>
                 </ul>
             </nav>
@@ -31,6 +34,7 @@
     </header>
     
 
+    <!-- INTRODUCCIÓN -->
     <section class="hero" id="inicio">
         <div class="container hero-content">
             <h1>Navais: Tecnología que siente, autonomía que libera.</h1>
@@ -39,6 +43,7 @@
         </div>
     </section>
 
+    <!-- PROBLEMA -->
     <section class="section bg-light" id="problema">
         <div class="container">
             <h2>El desafío de todos los días</h2>
@@ -48,19 +53,18 @@
         </div>
     </section>
 
+    <!-- SOLUCIÓN -->
     <section class="section" id="solucion">
         <div class="container">
             <h2>Nuestra Solución: Visión aumentada a través del tacto</h2>
             <div class="grid-2">
                 <div>
-                    <!-- Cambiamos los <li> por <p> para que la lectura de voz sea un relato fluido y no una lista robótica -->
                     <p>Pensando en esto, creamos <strong>Navais</strong>. Es un módulo encastrable que podés usar cómodamente en una pulsera o en tus anteojos. Funciona como una especie de linterna invisible: al mover tu brazo o tu cabeza, <strong>el dispositivo escanea el entorno frente a vos.</strong></p>
                     <p>Para lograr cero confusiones, decidimos no usar ultrasonido. En su lugar, incorporamos un <strong>sensor láser de alta precisión</strong> que aísla exactamente el obstáculo frontal. La respuesta es inmediata: <strong>la vibración aumenta su intensidad a medida que te acercás al objeto</strong>, permitiéndote mapear el peligro sin falsas alarmas y de manera completamente intuitiva.</p>
-                    
                     <p>Diseñamos este módulo priorizando la accesibilidad total. Gracias al uso de <strong>hardware libre y la impresión 3D local</strong>, logramos un costo de producción inigualable para ofrecerlo a un <strong>precio justo y verdaderamente accesible para todos</strong>.</p>
                 </div>
                 <div class="ondas-graficas ignorar-lectura">
-                    <!-- Elemento gráfico de ondas concéntricas (ignorado por el lector) -->
+                    <!-- Elemento gráfico de ondas concéntricas -->
                     <div class="onda-azul">
                         <div class="onda-negra"></div>
                     </div>
@@ -69,19 +73,18 @@
         </div>
     </section>
 
+    <!-- EQUIPO -->
     <section class="section bg-light" id="equipo">
         <div class="container text-center">
             <h2>¿Quiénes somos?</h2>
             <p>Navais nace de la mano de <strong>Ignacio, Juan, Fabricio y Adriel,</strong> cuatro estudiantes de la <strong>Escuela de Comercio Martín Zapata</strong>. Nos unimos para combinar nuestros conocimientos en <strong>modelado 3D, programación en Arduino y diseño</strong>. Nos impulsa una profunda empatía social y el deseo genuino de transformar realidades creando tecnología inclusiva.</p>
             
-            <!-- Contenedor de la foto del equipo -->
             <div class="imagen-equipo-container">
                 <div class="wrapper-equipo">
                     <img src="/img/equipo.jpeg" 
                          alt="" 
                          class="imagen-equipo">
                     
-                    <!-- Logo del Martín Zapata flotante -->
                     <img src="/img/Logo_mz.svg" 
                          alt="" 
                          class="logo-escuela-flotante">
@@ -90,13 +93,14 @@
         </div>
     </section>
 
+    <!-- CONTACTO -->
     <section class="section" id="contacto">
         <div class="container text-center">
             <h2>Sé parte de Navais</h2>
             <p><strong>Cada aporte suma.</strong> Buscamos instituciones dispuestas a testear el prototipo físico en la vía pública, alianzas con obras sociales para su distribución, y financiamiento para costear los componentes y escalar nuestra producción a todo el país.</p>
             <p>Podés conocer más de nuestro trabajo y contactarnos en nuestro <strong>Instagram</strong>: <a href="https://www.instagram.com/navais.ar" target="_blank">@navais.ar</a>. ¡Te esperamos!</p>
 
-            <!-- El formulario sigue existiendo para NVDA, pero nuestro botón de cuento lo ignora -->
+            <!-- AQUI DEBES PONER EL LINK DE FORMSPREE EN EL ACTION -->
             <form action="#contacto" method="POST" class="contact-form ignorar-lectura">
                 <input type="text" name="nombre" placeholder="Tu Nombre" required>
                 <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
@@ -106,16 +110,57 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container text-center">
-            <p>&copy; 2026 Navais. Tecnología de alta fidelidad, creada con empatía para acompañarte en cada paso.</p>
+    <!-- FOOTER UNIVERSAL (MAPA DEL SITIO) -->
+    <footer class="ignorar-lectura">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Columna 1: Marca -->
+                <div class="footer-col marca">
+                    <!-- Usamos un filtro CSS en línea para que el logo SVG se vea blanco sobre el fondo negro -->
+                    <img src="/img/Navais_logo1.svg" alt="Navais Logo" style="height: 60px; margin-bottom: 15px; filter: brightness(0) invert(1);">
+                    <p style="font-size: 0.95rem; color: #ccc;">Tecnología de alta fidelidad, creada con empatía para acompañarte en cada paso.</p>
+                </div>
+                
+                <!-- Columna 2: El Proyecto -->
+                <div class="footer-col">
+                    <h4>El Proyecto</h4>
+                    <ul>
+                        <li><a href="index.html#problema">El Problema</a></li>
+                        <li><a href="index.html#solucion">Nuestra Solución</a></li>
+                        <li><a href="index.html#equipo">El Equipo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Prototipos -->
+                <div class="footer-col">
+                    <h4>Prototipos 3D</h4>
+                    <ul>
+                        <li><a href="3d.html#v1">Versión 1 (Testeo)</a></li>
+                        <li><a href="3d.html#v2">Versión 2 (Ergonómico)</a></li>
+                        <li><a href="3d.html#kids">Navais Kids</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Impacto y Contacto -->
+                <div class="footer-col">
+                    <h4>Prensa y Redes</h4>
+                    <ul>
+                        <li><a href="notas.html#nota-1">Final Nacional</a></li>
+                        <li><a href="notas.html#nota-3">Reconocimiento UNCUYO</a></li>
+                        <li><a href="https://www.instagram.com/navais.ar" target="_blank">Instagram Oficial</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Navais. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
     <!-- Contenedor Flotante del Lector -->
     <div class="lector-flotante ignorar-lectura">
-        
-        
         <!-- El botón de acción -->
         <button id="btn-leer" class="btn-leer-flotante" aria-label="Leer la historia de Navais">
             🔊 Leer
@@ -125,5 +170,4 @@
     <script src="/js/index.js"></script>
     
 </body>
-
 </html>
