@@ -1,0 +1,222 @@
+<?php
+// Inicializamos variables
+$mensaje_estado = "";
+
+// Procesamiento del formulario de contacto
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = htmlspecialchars($_POST['nombre']);
+    $email = htmlspecialchars($_POST['email']);
+    $mensaje = htmlspecialchars($_POST['mensaje']);
+
+    // Lógica para enviar el email (comentada por ahora)
+    // mail("navais.support@gmail.com", "Nuevo mensaje de $nombre", $mensaje);
+
+    $mensaje_estado = "Gracias, $nombre. Hemos recibido tu mensaje y nos contactaremos pronto.";
+}
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navais - Tecnología que siente, autonomía que libera</title>
+    <!-- Tipografía Poppins cargada para toda la web -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" type="image/svg+xml" href="/img/isologo.svg">
+</head>
+
+<body>
+    <!-- NAVEGACIÓN UNIVERSAL -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.php">
+                <img src="/img/Navais_logo1.svg" alt="Home - Te damos la bienvenida a Navais." class="logo"
+                    id="logo-navais">
+            </a>
+
+            <nav class="ignorar-lectura">
+                <ul class="nav-links">
+                    <li><a href="index.php">El Proyecto</a></li>
+                    <li><a href="3d.php">Prototipos 3D</a></li>
+                    <li><a href="notas.php">En los Medios</a></li>
+                    <li><a href="#contacto" class="btn-primary">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <h1>Navais: Tecnología que siente, autonomía que libera.</h1>
+            <p>Imaginate caminar por la calle con la tranquilidad de que nada te va a tomar por sorpresa. Transformamos
+                la movilidad de las personas con discapacidad visual en <strong>una experiencia segura y autónoma,
+                    mediante tecnología pensada para todos.</strong></p>
+
+            <!-- Nuevos botones enlazados -->
+            <div class="botones-hero ignorar-lectura"
+                style="display: flex; gap: 15px; justify-content: center; margin-top: 25px; flex-wrap: wrap;">
+                <a href="#solucion" class="btn-primary">Conocé el proyecto</a>
+                <a href="prototipos.php" class="btn-secondary">Ver Prototipos 3D</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="problema">
+        <div class="container">
+            <h2>El desafío de todos los días</h2>
+            <p>Sabemos que el bastón blanco es vital y una extensión del cuerpo, pero tiene una limitación importante:
+                solo barre el nivel del suelo.<strong> De la cintura hacia arriba, el entorno se vuelve
+                    incierto</strong> y las personas con ceguera sufren el riesgo constante de impactos severos contra
+                ramas, carteles o toldos.</p>
+            <p>En Argentina, <strong>un millón de personas con discapacidad visual</strong> conviven diariamente con
+                este estrés. Esto muchas veces obliga a adoptar posturas defensivas al caminar y, lamentablemente, puede
+                llevar al aislamiento. Queremos cambiar esa realidad.</p>
+            <p><strong>Navais viene a complementar el uso del bastón blanco</strong>, ofreciendo una solución innovadora
+                que mejora la seguridad y la autonomía de las personas con discapacidad visual.</p>
+        </div>
+    </section>
+
+    <section class="section" id="solucion">
+        <div class="container">
+            <h2>Nuestra Solución: Visión aumentada a través del tacto</h2>
+            <div class="grid-2">
+                <div>
+                    <!-- Cambiamos los <li> por <p> para que la lectura de voz sea un relato fluido y no una lista robótica -->
+                    <p>Pensando en esto, creamos <strong>Navais</strong>. Es un módulo encastrable que podés usar
+                        cómodamente en una pulsera o en tus anteojos. Funciona como una especie de linterna invisible:
+                        al mover tu brazo o tu cabeza, <strong>el dispositivo escanea el entorno frente a vos.</strong>
+                    </p>
+                    <p>Para lograr cero confusiones, decidimos no usar ultrasonido. En su lugar, incorporamos un
+                        <strong>sensor láser de alta precisión</strong> que aísla exactamente el obstáculo frontal. La
+                        respuesta es inmediata: <strong>la vibración aumenta su intensidad a medida que te acercás al
+                            objeto</strong>, permitiéndote mapear el peligro sin falsas alarmas y de manera
+                        completamente intuitiva.</p>
+
+                    <p>Diseñamos este módulo priorizando la accesibilidad total. Gracias al uso de <strong>hardware
+                            libre y la impresión 3D local</strong>, logramos un costo de producción inigualable para
+                        ofrecerlo a un <strong>precio justo y verdaderamente accesible para todos</strong>.</p>
+                    <!-- Botón nuevo que lleva a prototipos -->
+                    
+                </div>
+                <div class="ondas-graficas ignorar-lectura">
+                    <!-- Elemento gráfico de ondas concéntricas (ignorado por el lector) -->
+                    <div class="onda-azul">
+                        <div class="onda-negra"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="equipo">
+        <div class="container text-center">
+            <h2>¿Quiénes somos?</h2>
+            <p>Navais nace de la mano de <strong>Ignacio, Juan, Fabricio y Adriel,</strong> cuatro estudiantes de la
+                <strong>Escuela de Comercio Martín Zapata</strong>. Nos unimos para combinar nuestros conocimientos en
+                <strong>modelado 3D, programación en Arduino y diseño</strong>. Nos impulsa una profunda empatía social
+                y el deseo genuino de transformar realidades creando tecnología inclusiva.</p>
+
+            <!-- Contenedor de la foto del equipo -->
+            <div class="imagen-equipo-container">
+                <!-- Botón nuevo que lleva a las notas -->
+                <div class="wrapper-equipo">
+                    <img src="/img/equipo.jpeg" alt="" class="imagen-equipo">
+                    
+                    <!-- Logo del Martín Zapata flotante -->
+                    <img src="/img/Logo_mz.svg" alt="" class="logo-escuela-flotante">
+                </div>
+                <div class="text-center ignorar-lectura" style="margin-top: 40px;">
+                    <a href="notas.php" class="btn-secondary">Ver el impacto de Navais en los Medios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contacto">
+        <div class="container text-center">
+            <h2>Sé parte de Navais</h2>
+            <p><strong>Cada aporte suma.</strong> Buscamos instituciones dispuestas a testear el prototipo físico en la
+                vía pública, alianzas con obras sociales para su distribución, y financiamiento para costear los
+                componentes y escalar nuestra producción a todo el país.</p>
+            <p>Podés conocer más de nuestro trabajo y contactarnos en nuestro <strong>Instagram</strong>: <a
+                    href="https://www.instagram.com/navais.ar" target="_blank">@navais.ar</a>. ¡Te esperamos!</p>
+
+            <!-- El formulario sigue existiendo para NVDA, pero nuestro botón de cuento lo ignora -->
+            <form action="#contacto" method="POST" class="contact-form ignorar-lectura">
+                <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+                <textarea name="mensaje" rows="5" placeholder="¿Cómo te gustaría colaborar?" required></textarea>
+                <button type="submit" class="btn-primary">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER UNIVERSAL (MAPA DEL SITIO) -->
+    <footer class="ignorar-lectura">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Columna 1: Marca -->
+                <div class="footer-col marca">
+                    <!-- Usamos un filtro CSS en línea para que el logo SVG se vea blanco sobre el fondo negro -->
+                    <img src="/img/Navais_logo1.svg" alt="Navais Logo" style="height: 60px; margin-bottom: 15px; filter: brightness(0) invert(1);">
+                    <p style="font-size: 0.95rem; color: #ccc;">Tecnología de alta fidelidad, creada con empatía para acompañarte en cada paso.</p>
+                </div>
+                
+                <!-- Columna 2: El Proyecto -->
+                <div class="footer-col">
+                    <h4>El Proyecto</h4>
+                    <ul>
+                        <li><a href="index.php#problema">El Problema</a></li>
+                        <li><a href="index.php#solucion">Nuestra Solución</a></li>
+                        <li><a href="index.php#equipo">El Equipo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Prototipos -->
+                <div class="footer-col">
+                    <h4>Prototipos 3D</h4>
+                    <ul>
+                        <li><a href="3d.php#v1">Versión 1 (Testeo)</a></li>
+                        <li><a href="3d.php#v2">Versión 2 (Ergonómico)</a></li>
+                        <li><a href="3d.php#kids">Navais Kids</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Impacto y Contacto -->
+                <div class="footer-col">
+                    <h4>Prensa y Redes</h4>
+                    <ul>
+                        <li><a href="notas.php#nota-1">Final Nacional</a></li>
+                        <li><a href="notas.php#nota-3">Reconocimiento UNCUYO</a></li>
+                        <li><a href="https://www.instagram.com/navais.ar" target="_blank">Instagram Oficial</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Navais. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Contenedor Flotante del Lector -->
+    <div class="lector-flotante ignorar-lectura">
+
+
+        <!-- El botón de acción -->
+        <button id="btn-leer" class="btn-leer-flotante" aria-label="Leer la historia de Navais">
+            🔊 Leer
+        </button>
+    </div>
+
+    <script src="/js/index.js"></script>
+
+</body>
+
+</html>
