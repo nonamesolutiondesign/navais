@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Variables de los modelos 3D (Lo que antes estaba en PHP)
-    const modelo_v1 = "CajaNavaisV3.glb"; 
+    const modelo_v1 = "modelos/navais1.0.glb"; 
     const modelo_v2 = ""; // Vacío = muestra el cartel de Próximamente
-    const modelo_kids = "omnitrixv2.0.glb"; 
+    const modelo_kids = "modelos/omnitrixv2.0.glb"; 
 
     // 2. Inyectar Modelo V1
     const contenedorV1 = document.getElementById("contenedor-v1");

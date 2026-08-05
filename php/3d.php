@@ -17,9 +17,9 @@
 <body>
     <?php
         // Variables de los modelos 3D
-        $modelo_v1 = "CajaNavaisV3.glb"; // El archivo que ya tenés
+        $modelo_v1 = "modelos/navais1.0.glb"; // El archivo que ya tenés
         $modelo_v2 = ""; // Aún no está listo, lo dejamos vacío para el placeholder
-        $modelo_kids = "omnitrixv2.0.glb"; // Modelo infantil futuro
+        $modelo_kids = "modelos/omnitrixv2.0.glb"; // Modelo infantil futuro
     ?>
 
    <!-- NAVEGACIÓN UNIVERSAL -->
