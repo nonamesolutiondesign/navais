@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const modelo_v1 = "modelos/navais1.0.glb"; 
     const modelo_v2 = ""; // Vacío = muestra el cartel de Próximamente
     const modelo_kids = "modelos/omnitrixv2.0.glb"; 
+    const modelo_kids2 = "modelos/minioms_terminado.glb"; 
+  
 
     // 2. Inyectar Modelo V1
     const contenedorV1 = document.getElementById("contenedor-v1");
@@ -56,4 +58,25 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }
     }
+    const contenedorKids2 = document.getElementById("contenedor-kids2");
+    if (contenedorKids2) {
+        if (modelo_kids2 !== "") {
+            contenedorKids2.innerHTML = `
+                <model-viewer 
+                    src="${modelo_kids2}" 
+                    alt="Modelo 3D interactivo del prototipo infantil Navais Kids." 
+                    auto-rotate 
+                    camera-controls 
+                    shadow-intensity="1"
+                    camera-orbit="45deg 55deg auto">
+                </model-viewer>
+            `;
+        } else {
+            contenedorKids2.innerHTML = `
+                <div class="coming-soon"><h3>Próximamente</h3></div>
+            `;
+        }
+    }
+
+      
 });
